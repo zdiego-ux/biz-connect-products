@@ -33,14 +33,23 @@ function Contact() {
         one message away.
       </p>
 
-      <div className="rule-top mt-16 grid gap-10 pt-12 md:grid-cols-3">
+      <div className="rule-top mt-16 grid gap-10 pt-12 md:grid-cols-4">
         <div>
           <h2 className="font-display text-base font-semibold">Email</h2>
           <a
             href={`mailto:${site.email}`}
-            className="mt-2 inline-block text-sm text-muted-foreground transition-colors hover:text-foreground"
+            className="mt-2 inline-block text-sm text-muted-foreground transition-colors hover:text-signal"
           >
             {site.email}
+          </a>
+        </div>
+        <div>
+          <h2 className="font-display text-base font-semibold">Phone</h2>
+          <a
+            href={`tel:${site.phoneHref}`}
+            className="mt-2 inline-block text-sm text-muted-foreground transition-colors hover:text-signal"
+          >
+            {site.phone}
           </a>
         </div>
         <div>
@@ -49,11 +58,12 @@ function Contact() {
             href={site.linkedin}
             target="_blank"
             rel="noreferrer noopener"
-            className="mt-2 inline-block text-sm text-muted-foreground transition-colors hover:text-foreground"
+            className="mt-2 inline-block text-sm text-muted-foreground transition-colors hover:text-signal"
           >
             LinkedIn
           </a>
         </div>
+
         <div>
           <h2 className="font-display text-base font-semibold">Get matched</h2>
           <div className="mt-3 flex flex-col items-start gap-2">
