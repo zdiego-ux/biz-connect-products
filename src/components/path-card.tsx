@@ -12,12 +12,12 @@ export function PathCard({
   href,
   children,
 }: {
-  index?: string;
+  index?: string | undefined;
   title: string;
   body: string;
   cta: string;
-  to?: ComponentProps<typeof Link>["to"];
-  href?: string;
+  to?: ComponentProps<typeof Link>["to"] | undefined;
+  href?: string | undefined;
   children?: ReactNode;
 }) {
   return (

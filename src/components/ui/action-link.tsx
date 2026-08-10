@@ -34,12 +34,12 @@ export function ActionLink({
   className,
   ...rest
 }: {
-  to?: ComponentProps<typeof Link>["to"];
-  href?: string;
-  variant?: Variant;
-  arrow?: boolean;
+  to?: ComponentProps<typeof Link>["to"] | undefined;
+  href?: string | undefined;
+  variant?: Variant | undefined;
+  arrow?: boolean | undefined;
   children: ReactNode;
-  className?: string;
+  className?: string | undefined;
 }) {
   const classes = cn(base, variant !== "ghost" && sizes, variants[variant], className);
 
