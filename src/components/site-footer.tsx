@@ -15,6 +15,10 @@ export function SiteFooter() {
           <a href={`mailto:${site.email}`} className={`${linkClass} mt-4 inline-block`}>
             {site.email}
           </a>
+          <a href={`tel:${site.phoneHref}`} className={`${linkClass} mt-1 block`}>
+            {site.phone}
+          </a>
+
         </div>
 
         <div>
