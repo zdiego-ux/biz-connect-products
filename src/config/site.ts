@@ -6,12 +6,14 @@ export const site = {
   name: "[COMPANY NAME]",
   shortName: "[COMPANY]",
   tagline: "Building products. Connecting businesses.",
-  email: "hello@example.com",
-  linkedin: "https://www.linkedin.com/",
-  /** Replace with the real intake form URLs. */
-  businessFormUrl: "[BUSINESS FORM URL]",
-  providerFormUrl: "[SERVICE PROVIDER FORM URL]",
+  email: "zdiego@thinkinglinks.net",
+  phone: "+39 347 565 0985",
+  phoneHref: "+393475650985",
+  linkedin: "https://www.linkedin.com/in/diego-zuccolo-994b26195/",
+  businessFormUrl: "https://tally.so/r/pbqbME",
+  providerFormUrl: "https://tally.so/r/yPAXM4",
 } as const;
+
 
 export type Product = {
   name: string;
