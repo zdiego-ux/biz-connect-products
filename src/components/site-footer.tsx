@@ -1,63 +1,63 @@
 import { Link } from "@tanstack/react-router";
 import { site } from "@/config/site";
+import { useLanguage } from "@/i18n/language-context";
 
 const linkClass = "text-sm text-muted-foreground transition-colors hover:text-foreground";
 
 export function SiteFooter() {
+  const { t } = useLanguage();
+
   return (
     <footer className="rule-top mt-24 bg-surface">
       <div className="container-page grid gap-12 py-16 md:grid-cols-4">
         <div>
           <p className="font-display text-base font-semibold text-foreground">{site.name}</p>
-          <p className="mt-3 max-w-xs text-sm text-muted-foreground">
-            We build technology and create valuable business connections.
-          </p>
+          <p className="mt-3 max-w-xs text-sm text-muted-foreground">{t.footer.blurb}</p>
           <a href={`mailto:${site.email}`} className={`${linkClass} mt-4 inline-block`}>
             {site.email}
           </a>
           <a href={`tel:${site.phoneHref}`} className={`${linkClass} mt-1 block`}>
             {site.phone}
           </a>
-
         </div>
 
         <div>
-          <p className="eyebrow">Company</p>
+          <p className="eyebrow">{t.footer.company}</p>
           <ul className="mt-4 space-y-3">
             <li>
               <Link to="/contact" className={linkClass}>
-                About
+                {t.footer.about}
               </Link>
             </li>
             <li>
               <Link to="/products" className={linkClass}>
-                Products
+                {t.footer.products}
               </Link>
             </li>
             <li>
               <Link to="/services" className={linkClass}>
-                Services
+                {t.footer.services}
               </Link>
             </li>
             <li>
               <Link to="/contact" className={linkClass}>
-                Contact
+                {t.footer.contact}
               </Link>
             </li>
           </ul>
         </div>
 
         <div>
-          <p className="eyebrow">Get matched</p>
+          <p className="eyebrow">{t.footer.getMatched}</p>
           <ul className="mt-4 space-y-3">
             <li>
               <a href={site.businessFormUrl} className={linkClass}>
-                For businesses — Find a provider
+                {t.footer.forBusinesses}
               </a>
             </li>
             <li>
               <a href={site.providerFormUrl} className={linkClass}>
-                For providers — Join our network
+                {t.footer.forProviders}
               </a>
             </li>
             <li>
@@ -69,21 +69,21 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <p className="eyebrow">Legal</p>
+          <p className="eyebrow">{t.footer.legal}</p>
           <ul className="mt-4 space-y-3">
             <li>
               <Link to="/contact" className={linkClass}>
-                Privacy Policy
+                {t.footer.privacy}
               </Link>
             </li>
             <li>
               <Link to="/contact" className={linkClass}>
-                Terms &amp; Conditions
+                {t.footer.terms}
               </Link>
             </li>
             <li>
               <Link to="/contact" className={linkClass}>
-                Cookie Policy
+                {t.footer.cookies}
               </Link>
             </li>
           </ul>
@@ -93,9 +93,9 @@ export function SiteFooter() {
       <div className="rule-top">
         <div className="container-page flex flex-col gap-2 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} {site.name}. All rights reserved.
+            © {new Date().getFullYear()} {site.name}. {t.footer.rights}
           </p>
-          <p>Products &amp; AI-powered business matching.</p>
+          <p>{t.footer.note}</p>
         </div>
       </div>
     </footer>
