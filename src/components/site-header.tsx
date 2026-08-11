@@ -17,8 +17,9 @@ export function SiteHeader() {
       <div className="container-page flex h-16 items-center justify-between">
         <Link
           to="/"
-          className="font-display text-base font-semibold tracking-tight text-foreground"
+          className="flex items-center gap-2.5 font-display text-base font-semibold tracking-tight text-foreground"
         >
+          <img src={logoAsset.url} alt="Thinking Links logo" className="h-9 w-9 object-contain" />
           {site.name}
         </Link>
 
