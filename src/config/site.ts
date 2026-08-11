@@ -3,8 +3,8 @@
  * Replace the placeholder values below (company name, form URLs, contacts).
  */
 export const site = {
-  name: "[COMPANY NAME]",
-  shortName: "[COMPANY]",
+  name: "Thinking Links",
+  shortName: "Thinking Links",
   tagline: "Building products. Connecting businesses.",
   email: "zdiego@thinkinglinks.net",
   phone: "+39 347 565 0985",
