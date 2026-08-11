@@ -1,3 +1,5 @@
+import thinkingGiftImage from "@/assets/thinkinggift.png.asset.json";
+
 /**
  * Central site configuration.
  * Replace the placeholder values below (company name, form URLs, contacts).
