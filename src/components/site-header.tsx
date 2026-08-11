@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { site } from "@/config/site";
-import logoAsset from "@/assets/logo.png.asset.json";
 
 const links = [
   { to: "/", label: "Home" },
@@ -18,9 +17,8 @@ export function SiteHeader() {
       <div className="container-page flex h-16 items-center justify-between">
         <Link
           to="/"
-          className="flex items-center gap-2.5 font-display text-base font-semibold tracking-tight text-foreground"
+          className="font-display text-base font-semibold tracking-tighter text-foreground uppercase"
         >
-          <img src={logoAsset.url} alt="Thinking Links logo" className="h-9 w-9 object-contain" />
           {site.name}
         </Link>
 
