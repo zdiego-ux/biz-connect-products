@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { site } from "@/config/site";
+import logoAsset from "@/assets/logo.png.asset.json";
 
 const links = [
   { to: "/", label: "Home" },
