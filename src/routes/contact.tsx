@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ActionLink } from "@/components/ui/action-link";
+import { useLanguage } from "@/i18n/language-context";
 import { site } from "@/config/site";
 
 export const Route = createFileRoute("/contact")({
@@ -22,20 +23,21 @@ export const Route = createFileRoute("/contact")({
 });
 
 function Contact() {
+  const { t } = useLanguage();
+
   return (
     <section className="container-page pt-24 pb-24 sm:pt-32">
-      <p className="eyebrow">Contact</p>
+      <p className="eyebrow">{t.contact.eyebrow}</p>
       <h1 className="mt-6 max-w-3xl text-5xl font-semibold leading-[1.05] sm:text-6xl">
-        Let&apos;s talk.
+        {t.contact.title}
       </h1>
       <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-        Whether you want to build a digital product or find the right business partner, we&apos;re
-        one message away.
+        {t.contact.lead}
       </p>
 
       <div className="rule-top mt-16 grid gap-10 pt-12 md:grid-cols-4">
         <div>
-          <h2 className="font-display text-base font-semibold">Email</h2>
+          <h2 className="font-display text-base font-semibold">{t.contact.email}</h2>
           <a
             href={`mailto:${site.email}`}
             className="mt-2 inline-block text-sm text-muted-foreground transition-colors hover:text-signal"
@@ -44,7 +46,7 @@ function Contact() {
           </a>
         </div>
         <div>
-          <h2 className="font-display text-base font-semibold">Phone</h2>
+          <h2 className="font-display text-base font-semibold">{t.contact.phone}</h2>
           <a
             href={`tel:${site.phoneHref}`}
             className="mt-2 inline-block text-sm text-muted-foreground transition-colors hover:text-signal"
@@ -53,7 +55,7 @@ function Contact() {
           </a>
         </div>
         <div>
-          <h2 className="font-display text-base font-semibold">Social</h2>
+          <h2 className="font-display text-base font-semibold">{t.contact.social}</h2>
           <a
             href={site.linkedin}
             target="_blank"
@@ -65,13 +67,13 @@ function Contact() {
         </div>
 
         <div>
-          <h2 className="font-display text-base font-semibold">Get matched</h2>
+          <h2 className="font-display text-base font-semibold">{t.contact.getMatched}</h2>
           <div className="mt-3 flex flex-col items-start gap-2">
             <ActionLink href={site.businessFormUrl} variant="ghost">
-              Find a Provider
+              {t.contact.findProvider}
             </ActionLink>
             <ActionLink href={site.providerFormUrl} variant="ghost">
-              Join Our Provider Network
+              {t.contact.joinNetwork}
             </ActionLink>
           </div>
         </div>

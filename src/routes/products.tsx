@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ProductCard } from "@/components/product-card";
 import { ActionLink } from "@/components/ui/action-link";
+import { useLanguage } from "@/i18n/language-context";
 import { products, site } from "@/config/site";
 
 export const Route = createFileRoute("/products")({
@@ -23,15 +24,17 @@ export const Route = createFileRoute("/products")({
 });
 
 function Products() {
+  const { t } = useLanguage();
+
   return (
     <>
       <section className="container-page pt-24 pb-12 sm:pt-32">
-        <p className="eyebrow">01 — Products</p>
+        <p className="eyebrow">{t.products.eyebrow}</p>
         <h1 className="mt-6 max-w-3xl text-5xl font-semibold leading-[1.05] sm:text-6xl">
-          Our Products
+          {t.products.title}
         </h1>
         <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-          Explore the digital products, platforms, and software projects we have built.
+          {t.products.lead}
         </p>
       </section>
 
@@ -44,12 +47,10 @@ function Products() {
       <section className="container-page">
         <div className="rule-top flex flex-col gap-6 py-16 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h2 className="text-2xl font-semibold sm:text-3xl">Looking for a partner instead?</h2>
-            <p className="mt-3 max-w-xl text-muted-foreground">
-              Our AI-powered matching connects companies with qualified service providers.
-            </p>
+            <h2 className="text-2xl font-semibold sm:text-3xl">{t.products.ctaTitle}</h2>
+            <p className="mt-3 max-w-xl text-muted-foreground">{t.products.ctaBody}</p>
           </div>
-          <ActionLink to="/services">Discover Our Services</ActionLink>
+          <ActionLink to="/services">{t.products.ctaButton}</ActionLink>
         </div>
       </section>
     </>

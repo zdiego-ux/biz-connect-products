@@ -1,16 +1,19 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { site } from "@/config/site";
-
-const links = [
-  { to: "/", label: "Home" },
-  { to: "/products", label: "Products" },
-  { to: "/services", label: "Services" },
-  { to: "/contact", label: "Contact" },
-] as const;
+import { useLanguage } from "@/i18n/language-context";
+import { LanguageToggle } from "@/components/language-switcher";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const { t } = useLanguage();
+
+  const links = [
+    { to: "/", label: t.nav.home },
+    { to: "/products", label: t.nav.products },
+    { to: "/services", label: t.nav.services },
+    { to: "/contact", label: t.nav.contact },
+  ] as const;
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur-md">
@@ -34,20 +37,24 @@ export function SiteHeader() {
               {l.label}
             </Link>
           ))}
+          <LanguageToggle />
         </nav>
 
-        <button
-          type="button"
-          aria-expanded={open}
-          aria-label="Toggle navigation menu"
-          onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border md:hidden"
-        >
-          <span className="sr-only">Menu</span>
-          <span aria-hidden className="font-display text-sm">
-            {open ? "✕" : "≡"}
-          </span>
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <LanguageToggle />
+          <button
+            type="button"
+            aria-expanded={open}
+            aria-label="Toggle navigation menu"
+            onClick={() => setOpen((v) => !v)}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border"
+          >
+            <span className="sr-only">Menu</span>
+            <span aria-hidden className="font-display text-sm">
+              {open ? "✕" : "≡"}
+            </span>
+          </button>
+        </div>
       </div>
 
       {open && (
