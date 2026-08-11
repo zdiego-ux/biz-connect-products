@@ -5,8 +5,8 @@ import thinkingGiftImage from "@/assets/thinkinggift.png.asset.json";
  * Replace the placeholder values below (company name, form URLs, contacts).
  */
 export const site = {
-  name: "Thinking Links",
-  shortName: "Thinking Links",
+  name: "[THINKING LINKS]",
+  shortName: "[THINKING LINKS]",
   tagline: "Building products. Connecting businesses.",
   email: "zdiego@thinkinglinks.net",
   phone: "+39 347 565 0985",

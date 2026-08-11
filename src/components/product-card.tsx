@@ -7,7 +7,13 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
       <div className="md:col-span-4">
         <p className="eyebrow">{String(index + 1).padStart(2, "0")}</p>
         <h2 className="mt-3 text-2xl font-semibold sm:text-3xl">{product.name}</h2>
-        <span className="mt-4 inline-block rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
+
+        <div className="mt-6 max-w-prose border-l-2 border-signal pl-4">
+          <p className="eyebrow">Problem it solves</p>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{product.problem}</p>
+        </div>
+
+        <span className="mt-6 inline-block rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
           {product.category}
         </span>
       </div>
@@ -32,11 +38,6 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
         <p className="max-w-prose text-base leading-relaxed text-foreground">
           {product.description}
         </p>
-
-        <div className="mt-6 max-w-prose border-l-2 border-signal pl-4">
-          <p className="eyebrow">Problem it solves</p>
-          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{product.problem}</p>
-        </div>
 
         <div className="mt-8">
           <ActionLink href={product.url} variant="outline">
