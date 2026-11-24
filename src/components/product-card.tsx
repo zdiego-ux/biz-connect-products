@@ -42,9 +42,11 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
         ) : (
           <div
             aria-hidden
-            className="mb-8 flex h-44 items-center justify-center rounded-lg border border-dashed border-border bg-muted/60 font-display text-sm text-muted-foreground"
+            className="mb-8 flex h-48 items-center justify-center rounded-lg border border-border bg-muted/60 p-8 sm:h-56"
           >
-            Product image
+            <span className="font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+              {product.name}
+            </span>
           </div>
         )}
 

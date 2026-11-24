@@ -53,29 +53,29 @@ export const products: Product[] = [
     category: "Digital Marketplace",
     categoryIt: "Marketplace digitale",
     description:
-      "A marketplace for independent writing where readers discover and buy essays, research and fiction directly from independent writers. A simple token system (one token per publication) makes buying effortless, every purchase stays in the reader's personal library, and writers get their own dashboard to publish and reach their audience.",
+      "Folio AI is a digital marketplace for literature — a kind of Shopify for written content — where anyone can publish, sell and distribute their work independently. Through a simple PDF-based marketplace, writers can monetise even their smallest creations, build an audience, gain followers and turn individual readers into long-term supporters. Folio AI also helps authors drive traffic to their own independent publications, websites and Amazon listings, giving writers the visibility, ownership and commercial opportunities that traditional publishing often fails to provide.",
     descriptionIt:
-      "Un marketplace per la scrittura indipendente dove i lettori scoprono e acquistano saggi, ricerche e narrativa direttamente dagli autori. Un semplice sistema a token (un token per pubblicazione) rende l'acquisto immediato, ogni contenuto acquistato resta nella libreria personale del lettore e gli autori hanno una dashboard dedicata per pubblicare e raggiungere il proprio pubblico.",
+      "Folio AI è un marketplace digitale per la letteratura — una sorta di Shopify per i contenuti scritti — dove chiunque può pubblicare, vendere e distribuire le proprie opere in modo indipendente. Grazie a un semplice marketplace basato su PDF, gli autori possono monetizzare anche le loro creazioni più brevi, costruire un pubblico, ottenere follower e trasformare i singoli lettori in sostenitori nel tempo. Folio AI aiuta inoltre gli autori a portare traffico verso le proprie pubblicazioni indipendenti, i propri siti web e le pagine Amazon, offrendo quella visibilità, quel controllo e quelle opportunità commerciali che l'editoria tradizionale spesso non garantisce.",
     problem:
-      "Great independent writing is hard to find and even harder to monetise. Folio gives readers one place to discover ideas worth reading, and gives writers a direct way to publish and earn from their work — without intermediaries or subscriptions.",
+      "The publishing industry remains highly traditional, gatekept and difficult to access. Many talented writers struggle to gain visibility and reach readers, even when producing high-quality content. At the same time, attention spans are shrinking and readers are increasingly drawn to shorter, more accessible pieces. As a result, valuable creative work — individual poems, short stories, essays and independent writing — often remains undiscovered simply because it doesn't fit traditional publishing or commercial models.",
     problemIt:
-      "La buona scrittura indipendente è difficile da trovare e ancora più difficile da monetizzare. Folio offre ai lettori un unico posto dove scoprire idee che vale la pena leggere, e agli autori un modo diretto per pubblicare e guadagnare dal proprio lavoro — senza intermediari né abbonamenti.",
+      "L'editoria è ancora un settore molto tradizionale, chiuso e difficile da raggiungere. Molti autori di talento faticano a ottenere visibilità e a raggiungere i lettori, anche quando producono contenuti di qualità. Allo stesso tempo la soglia di attenzione si riduce e i lettori sono sempre più attratti da contenuti brevi e accessibili. Così opere di valore — singole poesie, racconti, saggi e scritti indipendenti — restano spesso sconosciute solo perché non rientrano nei modelli editoriali e commerciali tradizionali.",
     url: "https://accurate-frame-forge.vercel.app/",
     image: "/products/folio.png",
     imageBg: "#faf9f6",
   },
   {
-    name: "[PRODUCT NAME 03]",
-    category: "AI Tooling",
-    categoryIt: "Strumenti AI",
+    name: "Hex World",
+    category: "Persistent Strategy Game",
+    categoryIt: "Gioco di strategia persistente",
     description:
-      "A short description explaining what the platform does and who it is designed for. Replace this copy with the real product summary.",
+      "Hex World aims to become the first truly persistent virtual world, where players share a single, evolving universe with a continuous history and no predefined ending. Every player can build cities, territories and civilisations, develop economies, establish trade relationships and wage wars with real, lasting consequences. Everything runs on a shared database and an interconnected economy with dynamic pricing, supply and demand, market fluctuations and competition between players and civilisations. Unlike traditional games, Hex World never resets: its history is written continuously by its players, creating a living world where every decision matters and every civilisation leaves its mark.",
     descriptionIt:
-      "Una breve descrizione che spiega cosa fa la piattaforma e a chi è rivolta. Sostituisci questo testo con la descrizione reale del prodotto.",
+      "Hex World punta a diventare il primo mondo virtuale davvero persistente, in cui i giocatori condividono un unico universo in continua evoluzione, con una storia ininterrotta e senza un finale prestabilito. Ogni giocatore può costruire città, territori e civiltà, sviluppare economie, stringere rapporti commerciali e combattere guerre con conseguenze reali e durature. Tutto si basa su un database condiviso e su un'economia interconnessa, con prezzi dinamici, domanda e offerta, fluttuazioni di mercato e competizione tra giocatori e civiltà. A differenza dei giochi tradizionali, Hex World non si azzera mai: la sua storia viene scritta continuamente dai giocatori, dando vita a un mondo in cui ogni decisione conta e ogni civiltà lascia il segno.",
     problem:
-      "Business-critical data stays unused because it is too slow to analyse manually.",
+      "Most multiplayer strategy games run in isolated matches, temporary campaigns or predefined scenarios where progress eventually resets and the consequences of players' actions disappear. Players invest time and creativity building armies, cities and civilisations, only to see their achievements confined to a limited game cycle. Meanwhile, virtual economies are often artificial and disconnected, lacking the complexity of genuinely shared markets. There is room for something much bigger: a persistent world where decisions have lasting consequences, wars reshape history, and creativity, strategy, diplomacy and economics are interconnected.",
     problemIt:
-      "I dati critici per il business restano inutilizzati perché analizzarli manualmente è troppo lento.",
-    url: "https://example.com",
+      "La maggior parte dei giochi strategici multiplayer si svolge in partite isolate, campagne temporanee o scenari predefiniti, dove i progressi prima o poi si azzerano e le conseguenze delle azioni dei giocatori svaniscono. I giocatori investono tempo e creatività per costruire eserciti, città e civiltà, per poi vedere i propri risultati confinati in un ciclo di gioco limitato. Inoltre le economie virtuali sono spesso artificiali e scollegate, prive della complessità di un vero mercato condiviso. C'è spazio per qualcosa di molto più grande: un mondo persistente in cui le decisioni hanno conseguenze durature, le guerre riscrivono la storia e creatività, strategia, diplomazia ed economia sono interconnesse.",
+    url: "https://hex-world-eta.vercel.app/",
   },
 ];
