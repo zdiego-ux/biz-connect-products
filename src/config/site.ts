@@ -1,5 +1,3 @@
-import thinkingGiftImage from "@/assets/thinkinggift.png.asset.json";
-
 /**
  * Central site configuration.
  */
@@ -22,8 +20,10 @@ export type Product = {
   description: string;
   problem: string;
   url: string;
-  /** Optional image/logo URL. */
+  /** Optional image/logo path (served from /public). */
   image?: string;
+  /** Background colour behind the logo, matched to the image's own background. */
+  imageBg?: string;
   /** Italian translations (optional). */
   categoryIt?: string;
   descriptionIt?: string;
@@ -45,21 +45,24 @@ export const products: Product[] = [
     problemIt:
       "Trovare regali significativi è sempre più difficile in un mondo già pieno di prodotti fisici. Rendiamo semplice scoprire e regalare esperienze locali — da una cena a un massaggio. Allo stesso tempo aiutiamo le piccole attività a trasformare i propri servizi in esperienze regalabili, aprendo un nuovo canale di ricavi e digitalizzando facilmente le operazioni.",
     url: "https://thinkinggift.click/",
-    image: thinkingGiftImage.url,
+    image: "/products/thinkinggifts.webp",
+    imageBg: "#fefefe",
   },
   {
-    name: "[PRODUCT NAME 02]",
-    category: "Marketplace",
-    categoryIt: "Marketplace",
+    name: "Folio AI",
+    category: "Digital Marketplace",
+    categoryIt: "Marketplace digitale",
     description:
-      "A short description explaining what the platform does and who it is designed for. Replace this copy with the real product summary.",
+      "A marketplace for independent writing where readers discover and buy essays, research and fiction directly from independent writers. A simple token system (one token per publication) makes buying effortless, every purchase stays in the reader's personal library, and writers get their own dashboard to publish and reach their audience.",
     descriptionIt:
-      "Una breve descrizione che spiega cosa fa la piattaforma e a chi è rivolta. Sostituisci questo testo con la descrizione reale del prodotto.",
+      "Un marketplace per la scrittura indipendente dove i lettori scoprono e acquistano saggi, ricerche e narrativa direttamente dagli autori. Un semplice sistema a token (un token per pubblicazione) rende l'acquisto immediato, ogni contenuto acquistato resta nella libreria personale del lettore e gli autori hanno una dashboard dedicata per pubblicare e raggiungere il proprio pubblico.",
     problem:
-      "Buyers and suppliers struggle to discover each other and to qualify fit quickly.",
+      "Great independent writing is hard to find and even harder to monetise. Folio gives readers one place to discover ideas worth reading, and gives writers a direct way to publish and earn from their work — without intermediaries or subscriptions.",
     problemIt:
-      "Acquirenti e fornitori faticano a trovarsi e a valutare rapidamente la compatibilità.",
-    url: "https://example.com",
+      "La buona scrittura indipendente è difficile da trovare e ancora più difficile da monetizzare. Folio offre ai lettori un unico posto dove scoprire idee che vale la pena leggere, e agli autori un modo diretto per pubblicare e guadagnare dal proprio lavoro — senza intermediari né abbonamenti.",
+    url: "https://accurate-frame-forge.vercel.app/",
+    image: "/products/folio.png",
+    imageBg: "#faf9f6",
   },
   {
     name: "[PRODUCT NAME 03]",

@@ -27,12 +27,18 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
 
       <div className="md:col-span-8">
         {product.image ? (
-          <img
-            src={product.image}
-            alt={`${product.name} — ${t.products.imageAlt}`}
-            loading="lazy"
-            className="mb-8 w-full rounded-lg border border-border object-cover"
-          />
+          <div
+            className="mb-8 flex h-48 items-center justify-center overflow-hidden rounded-lg border border-border p-8 sm:h-56"
+            style={{ backgroundColor: product.imageBg ?? "#ffffff" }}
+          >
+            <img
+              src={product.image}
+              alt={`${product.name} — ${t.products.imageAlt}`}
+              loading="lazy"
+              decoding="async"
+              className="h-auto max-h-full w-auto max-w-full object-contain"
+            />
+          </div>
         ) : (
           <div
             aria-hidden
