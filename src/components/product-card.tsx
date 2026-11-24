@@ -28,7 +28,7 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
       <div className="md:col-span-8">
         {product.image ? (
           <div
-            className="mb-8 flex h-48 items-center justify-center overflow-hidden rounded-lg border border-border p-8 sm:h-56"
+            className={`mb-8 flex items-center justify-center overflow-hidden rounded-lg border border-border ${product.imageFit === "cover" ? "aspect-video" : "h-48 p-8 sm:h-56"}`}
             style={{ backgroundColor: product.imageBg ?? "#ffffff" }}
           >
             <img
@@ -36,7 +36,11 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
               alt={`${product.name} — ${t.products.imageAlt}`}
               loading="lazy"
               decoding="async"
-              className="h-auto max-h-full w-auto max-w-full object-contain"
+              className={
+                product.imageFit === "cover"
+                  ? "h-full w-full object-cover"
+                  : "h-auto max-h-full w-auto max-w-full object-contain"
+              }
             />
           </div>
         ) : (

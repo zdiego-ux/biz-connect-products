@@ -24,6 +24,8 @@ export type Product = {
   image?: string;
   /** Background colour behind the logo, matched to the image's own background. */
   imageBg?: string;
+  /** "contain" (default) for logos, "cover" for screenshots that should fill the frame. */
+  imageFit?: "contain" | "cover";
   /** Italian translations (optional). */
   categoryIt?: string;
   descriptionIt?: string;
@@ -77,5 +79,7 @@ export const products: Product[] = [
     problemIt:
       "La maggior parte dei giochi strategici multiplayer si basa su partite isolate che prima o poi si azzerano, cancellando i risultati dei giocatori. Le loro economie virtuali sono spesso artificiali e scollegate, prive della profondità di un vero mercato condiviso.",
     url: "https://hex-world-eta.vercel.app/",
+    image: "/products/hexworld.webp",
+    imageFit: "cover",
   },
 ];
